@@ -2,11 +2,11 @@ from CpfTad import CpfTad
 from LinkedList import LinkedList
 from Node import Node
 
-# cpf = CpfTad()
-cpfString = '06988129308'
-# cpf.lerCpf(cpfString)
-# print(cpf.cpf)
-# print("É um CPF válido: ", cpf.isCpfValido())
+cpf = CpfTad()
+cpfString = '06988129307'
+cpf.lerCpf(cpfString)
+print(cpf.cpf)
+print("É um CPF válido: ", cpf.isCpfValido())
 
 ll = LinkedList()
 for num in cpfString:

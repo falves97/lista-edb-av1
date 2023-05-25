@@ -1,23 +1,26 @@
+from LinkedList import LinkedList
+
+
 class CpfTad:
-    cpf = []
+    cpf = LinkedList()
 
     def lerCpf(self, cpfString):
         if len(cpfString) != 11:
             return False
 
         for i in range(11):
-            self.cpf.append(int(cpfString[i]))
+            self.cpf.add(int(cpfString[i]))
 
     def isCpfValido(self):
         firstDigit = 0
         secondDigit = 0
-        if len(self.cpf) != 11:
+        if self.cpf.size != 11:
             return False
 
         sm = 0
         for i in range(10, 1, -1):
             index = 10 - i
-            sm += self.cpf[index] * i
+            sm += self.cpf.get(index).data * i
 
         sm = 11 - (sm % 11)
         if sm == 11 or sm == 10:
@@ -28,7 +31,7 @@ class CpfTad:
         sm = 0
         for i in range(11, 1, -1):
             index = 11 - i
-            sm += self.cpf[index] * i
+            sm += self.cpf.get(index).data * i
 
         sm = 11 - (sm % 11)
         if sm == 11 or sm == 10:
@@ -36,4 +39,4 @@ class CpfTad:
         else:
             secondDigit = sm
 
-        return firstDigit == self.cpf[9] and secondDigit == self.cpf[10]
+        return firstDigit == self.cpf.get(9).data and secondDigit == self.cpf.get(10).data
