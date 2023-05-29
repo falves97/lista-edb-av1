@@ -109,3 +109,13 @@ class LinkedList:
                     break
 
                 node = node.next
+
+    def count_elements(self):
+        node = self._root
+        count = 0
+
+        while node is not None:
+            count += 1
+            node = node.next
+
+        return count
