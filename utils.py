@@ -52,3 +52,15 @@ def pares(list):
             pares.append(list.get(i).data)
 
     return pares
+
+
+def fibonacci(limit=0):
+    if limit <= 1:
+        return 1
+    else:
+        return fibonacci(limit - 1) + fibonacci(limit - 2)
+
+
+def list_fibonacci(list, limit):
+    for i in range(limit):
+        list.add(fibonacci(i))

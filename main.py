@@ -1,6 +1,8 @@
+import random
+
 from CpfTad import CpfTad
 from LinkedList import LinkedList
-from utils import list2Matrix, main_diagonal, sec_diagonal, count_impares, pares
+from utils import list2Matrix, main_diagonal, sec_diagonal, count_impares, pares, fibonacci, list_fibonacci
 
 # cpf = CpfTad()
 # cpfString = '06988129307'
@@ -29,16 +31,27 @@ from utils import list2Matrix, main_diagonal, sec_diagonal, count_impares, pares
 # print(f'valor do node 1: {ll.get(1).data}')
 
 # Teste matriz de inteiros
-ll = LinkedList()
-for i in range(10):
-    ll.add(i)
+# ll = LinkedList()
+# for i in range(10, 0, -1):
+#     ll.add(i)
+#
+# ll.show_list()
+# print()
+# matrix = list2Matrix(ll, 3)
+#
+# print(f'Matriz: {matrix}')
+# print(main_diagonal(matrix))
+# print(sec_diagonal(matrix))
+# print(f'Quantidade de ímpares: {count_impares(ll)}')
+# print(f'Quantidade de elementos: {ll.count_elements()}')
+# print(f'Todos os pares: {pares(ll)}')
+# ll.selectSort()
+# ll.show_list()
+# print()
+# print(f'position de 2: {ll.binarySearch(2)}')
+list = LinkedList()
+# list_fibonacci(list, 6)
+for i in range(16):
+    list.add(i)
 
-ll.show_list()
-matrix = list2Matrix(ll, 3)
-
-print(matrix)
-print(main_diagonal(matrix))
-print(sec_diagonal(matrix))
-print(f'Quantidade de ímpares: {count_impares(ll)}')
-print(f'Quantidade de elementos: {ll.count_elements()}')
-print(f'Todos os pares: {pares(ll)}')
+print(list.numeros_feios())
